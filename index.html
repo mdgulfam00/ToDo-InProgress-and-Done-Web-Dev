@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="board ">
+        <div class="status background_color" id="todo">
+            <h2>Todo</h2>
+            <div class="tasks" id="tasks-todo" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)"></div>
+            <button class="new-task" onclick="newTask('todo')">Add New Item</button>
+        </div>
+        <div class="status background_color" id="inprogress">
+            <h2>In Progress</h2>
+            <div class="tasks" id="tasks-inprogress" ondrop="drop(event, 'inprogress')" ondragover="allowDrop(event)"></div>
+            <button class="new-task" onclick="newTask('inprogress')">Add New Item</button>
+        </div>
+        <div class="status background_color" id="done">
+            <h2>Completed</h2>
+            <div class="tasks" id="tasks-done" ondrop="drop(event, 'done')" ondragover="allowDrop(event)"></div>
+            <button class="new-task" onclick="newTask('done')">Add New Item</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
